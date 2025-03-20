@@ -1,0 +1,36 @@
+{
+  "name": "react-native-verifone-demo",
+  "version": "6.0.1",
+  "description": "VerifoneNative3 bindings for React Native (Android & iOS)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified yet\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vikramtote/react-native-verifone-demo.git"
+  },
+  "keywords": [
+    "react-native-verifone-demo",
+    "react-component",
+    "reactnative",
+    "react-native",
+    "ios",
+    "android",
+    "promise"
+  ],
+  "author": "Andrzej Porebski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vikramtote/react-native-verifone-demo/issues"
+  },
+  "homepage": "https://github.com/vikramtote/react-native-verifone-demo",
+  "peerDependencies": {
+    "react-native": ">=0.14.0"
+  },
+  "devDependencies": {
+    "react": "16.13.1",
+    "react-native": "^0.63.2",
+    "react-native-windows": "^0.63.6"
+  }
+}
