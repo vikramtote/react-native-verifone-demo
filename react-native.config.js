@@ -2,7 +2,7 @@ module.exports = {
 	dependency: {
 		platforms: {
 			windows: {
-				sourceDir: './platforms/windows',
+				sourceDir: './windows',
 				solutionFile: 'VerifoneNativeModule.sln',
 				projects: [
 				  {
