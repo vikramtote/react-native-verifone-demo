@@ -5,9 +5,9 @@
     <CppWinRTOptimized>true</CppWinRTOptimized>
     <CppWinRTRootNamespaceAutoMerge>true</CppWinRTRootNamespaceAutoMerge>
     <MinimalCoreWin>true</MinimalCoreWin>
-    <ProjectGuid>{d40ca1b9-5f56-4643-9d6c-933016477128}</ProjectGuid>
-    <ProjectName>react-native-verifone-demo</ProjectName>
-    <RootNamespace>react-native-verifone-demo</RootNamespace>
+    <ProjectGuid>{882782a3-39b8-4508-b170-4028112e5ad2}</ProjectGuid>
+    <ProjectName>VerifoneNativeModule</ProjectName>
+    <RootNamespace>VerifoneNativeModule</RootNamespace>
     <DefaultLanguage>en-US</DefaultLanguage>
     <MinimumVisualStudioVersion>16.0</MinimumVisualStudioVersion>
     <AppContainerApplication>true</AppContainerApplication>
@@ -15,7 +15,7 @@
     <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
     <WindowsTargetPlatformVersion Condition=" '$(WindowsTargetPlatformVersion)' == '' ">10.0.18362.0</WindowsTargetPlatformVersion>
     <WindowsTargetPlatformMinVersion>10.0.16299.0</WindowsTargetPlatformMinVersion>
-    <PackageCertificateKeyFile>react-native-verifone-demo_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>VerifoneNativeModule_TemporaryKey.pfx</PackageCertificateKeyFile>
     <PackageCertificatePassword>password</PackageCertificatePassword>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />

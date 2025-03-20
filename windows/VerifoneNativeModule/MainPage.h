@@ -2,7 +2,7 @@
 #include "MainPage.g.h"
 #include <winrt/Microsoft.ReactNative.h>
 
-namespace winrt::react-native-verifone-demo::implementation
+namespace winrt::VerifoneNativeModule::implementation
 {
     struct MainPage : MainPageT<MainPage>
     {
@@ -10,7 +10,7 @@ namespace winrt::react-native-verifone-demo::implementation
     };
 }
 
-namespace winrt::react-native-verifone-demo::factory_implementation
+namespace winrt::VerifoneNativeModule::factory_implementation
 {
     struct MainPage : MainPageT<MainPage, implementation::MainPage>
     {

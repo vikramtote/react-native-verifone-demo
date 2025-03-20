@@ -1,4 +1,4 @@
-namespace react-native-verifone-demo
+namespace VerifoneNativeModule
 {
     [default_interface]
     runtimeclass MainPage : Windows.UI.Xaml.Controls.Page

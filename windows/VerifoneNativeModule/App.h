@@ -4,7 +4,7 @@
 
 namespace activation = winrt::Windows::ApplicationModel::Activation;
 
-namespace winrt::react-native-verifone-demo::implementation
+namespace winrt::VerifoneNativeModule::implementation
 {
     struct App : AppT<App>
     {
@@ -15,4 +15,4 @@ namespace winrt::react-native-verifone-demo::implementation
       private:
         using super = AppT<App>;
     };
-} // namespace winrt::react-native-verifone-demo::implementation
+} // namespace winrt::VerifoneNativeModule::implementation

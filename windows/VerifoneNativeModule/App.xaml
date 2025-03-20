@@ -1,8 +1,8 @@
 ﻿<react:ReactApplication
-    x:Class="react-native-verifone-demo.App"
+    x:Class="VerifoneNativeModule.App"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:react-native-verifone-demo"
+    xmlns:local="using:VerifoneNativeModule"
     xmlns:react="using:Microsoft.ReactNative">
     <Application.Resources>
         <XamlControlsResources xmlns="using:Microsoft.UI.Xaml.Controls" />

@@ -5,8 +5,8 @@
 #include "AutolinkedNativeModules.g.h"
 #include "ReactPackageProvider.h"
 
-using namespace winrt::react-native-verifone-demo;
-using namespace winrt::react-native-verifone-demo::implementation;
+using namespace winrt::VerifoneNativeModule;
+using namespace winrt::VerifoneNativeModule::implementation;
 using namespace winrt;
 using namespace Windows::UI::Xaml;
 using namespace Windows::UI::Xaml::Controls;
@@ -53,7 +53,7 @@ void App::OnLaunched(activation::LaunchActivatedEventArgs const& e)
     super::OnLaunched(e);
 
     Frame rootFrame = Window::Current().Content().as<Frame>();
-    rootFrame.Navigate(xaml_typename<react-native-verifone-demo::MainPage>(), box_value(e.Arguments()));
+    rootFrame.Navigate(xaml_typename<VerifoneNativeModule::MainPage>(), box_value(e.Arguments()));
 }
 
 /// <summary>
