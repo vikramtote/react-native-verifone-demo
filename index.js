@@ -1,85 +1,13 @@
-/*
- * verifone.js
- *
- * Created by Andrzej Porebski on 10/29/15.
- * Copyright (c) 2015-16 Andrzej Porebski.
- *
- * This library is available under the terms of the MIT License (2008).
- * See http://opensource.org/licenses/alphabetical for full text.
- */
-var plugin = require('./lib/sqlite.core.js');
-var {VerifoneNativeFactory} = plugin;
+import { NativeEventEmitter, NativeModules, EmitterSubscription } from 'react-native';
 
-var config = [
+export type VerifoneNativeModuleType = {
+  initVerifone: (deviceIpAddress: string) => Promise<void>;
+};
 
-  // meaning: [returnValueExpected,prototype,fn,argsNeedPadding,reverseCallbacks,rejectOnError]
+const VerifoneNativeModule = NativeModules.VerifoneNativeModule;
 
-  [false,"VerifoneNativeModule","transaction",false,true,true],
-  [false,"VerifoneNativeModule","readTransaction",false,true,true],
-  [false,"VerifoneNativeModule","close",false,false,true],
-  [false,"VerifoneNativeModule","executeSql",true,false,true],
-  [false,"VerifoneNativeModule","sqlBatch",false,false,true],
-  [false,"VerifoneNativeModule","attach",true,false,true],
-  [false,"VerifoneNativeModule","detach",false,false,true],
-  [false,"VerifoneNativeModuleTransaction","executeSql",true,false,false],
-  [false,"VerifoneNativeFactory","deleteDatabase",false,false,true],
-  [true, "VerifoneNativeFactory","openDatabase",false,false,true],
-  [false,"VerifoneNativeFactory","echoTest",false,false,true]
-];
-
-var originalFns = {};
-config.forEach(entry => {
-  let [returnValueExpected,prototype,fn]= entry;
-  let originalFn = plugin[prototype].prototype[fn];
-  originalFns[prototype + "." + fn] = originalFn;
-});
-
-function enablePromiseRuntime(enable){
-  if (enable){
-    createPromiseRuntime();
-  } else {
-    createCallbackRuntime();
-  }
+const VerifoneComm: VerifoneNativeModuleType = {
+  initVerifone: (deviceIpAddress: string) => {}
 }
-function createCallbackRuntime() {
-  config.forEach(entry => {
-    let [returnValueExpected,prototype,fn,argsNeedPadding,reverseCallbacks,rejectOnError]= entry;
-    plugin[prototype].prototype[fn] = originalFns[prototype + "." + fn];
-  });
-  plugin.log("Callback based runtime ready");
-}
-function createPromiseRuntime() {
-  config.forEach(entry => {
-    let [returnValueExpected,prototype,fn,argsNeedPadding,reverseCallbacks,rejectOnError]= entry;
-    let originalFn = plugin[prototype].prototype[fn];
-    plugin[prototype].prototype[fn] = function(...args){
-      if (argsNeedPadding && args.length == 1){
-        args.push([]);
-      }
-      var promise = new Promise((resolve,reject) => {
-        let success = function(...args){
-          if (!returnValueExpected) {
-           return resolve(args);
-          }
-        };
-        let error = function(err){
-          plugin.log('error: ',fn,...args,arguments);
-          if (rejectOnError) {
-            reject(err);
-          }
-          return false;
-        };
-        var retValue = originalFn.call(this,...args,reverseCallbacks ? error : success, reverseCallbacks ? success : error);
-        if (returnValueExpected){
-          return resolve(retValue);
-        }
-      });
 
-      return promise;
-    }
-  });
-  plugin.log("Promise based runtime ready");
-}
-VerifoneNativeFactory.prototype.enablePromise = enablePromiseRuntime;
-
-module.exports = new VerifoneNativeFactory();
+export default VerifoneComm;
