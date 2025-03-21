@@ -5,7 +5,7 @@
     <CppWinRTOptimized>true</CppWinRTOptimized>
     <CppWinRTRootNamespaceAutoMerge>true</CppWinRTRootNamespaceAutoMerge>
     <MinimalCoreWin>true</MinimalCoreWin>
-    <ProjectGuid>{882782a3-39b8-4508-b170-4028112e5ad2}</ProjectGuid>
+    <ProjectGuid>{ce41cdd7-f3a1-43da-8c86-5070e5633c6a}</ProjectGuid>
     <ProjectName>VerifoneNativeModule</ProjectName>
     <RootNamespace>VerifoneNativeModule</RootNamespace>
     <DefaultLanguage>en-US</DefaultLanguage>

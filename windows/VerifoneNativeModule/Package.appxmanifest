@@ -7,11 +7,11 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="76ec044e-defd-40d0-b9c5-8f5f476e7cc5"
+    Name="d86c9832-697e-4aa5-bc70-ba7f6b741bca"
     Publisher="CN=vikrambiwal"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="76ec044e-defd-40d0-b9c5-8f5f476e7cc5" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="d86c9832-697e-4aa5-bc70-ba7f6b741bca" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>VerifoneNativeModule</DisplayName>
