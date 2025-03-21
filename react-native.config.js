@@ -3,10 +3,10 @@ module.exports = {
 		platforms: {
 			windows: {
 				sourceDir: './windows',
-				solutionFile: 'react-native-verifone-demo.sln',
+				solutionFile: 'VerifoneNativeModule.sln',
 				projects: [
 				  {
-					projectFile: 'react-native-verifone-demo/react-native-verifone-demo.vcxproj',
+					projectFile: 'VerifoneNativeModule/VerifoneNativeModule.vcxproj',
 					directDependency: true,
 				  }
 				],
